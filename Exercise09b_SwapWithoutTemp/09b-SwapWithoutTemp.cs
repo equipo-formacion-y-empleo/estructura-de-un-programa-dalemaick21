@@ -3,9 +3,9 @@ using System;
 void SwapWithoutTemp(int a, int b)
 {
     Console.WriteLine($"Antes: a={a}, b={b}");
-    // TODO: Implementar el intercambio usando XOR
-    throw new NotImplementedException();
-    // Console.WriteLine($"Después: a={a}, b={b}");
+     a ^= b;
+     b ^= a;
+     a ^= b;
 }
 
 // Obtener argumentos de línea de comandos
