@@ -1,6 +1,6 @@
 bool CanDrive(int age, bool hasLicense)
 {
-    throw new NotImplementedException();
+    return age >= 18; 
 }
 
 bool IsAdult(int age)
