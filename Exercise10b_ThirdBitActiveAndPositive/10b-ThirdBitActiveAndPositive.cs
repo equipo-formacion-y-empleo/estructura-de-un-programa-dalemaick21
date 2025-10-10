@@ -1,10 +1,11 @@
 using System;
+using System.Globalization;
 
 bool ThirdBitActiveAndPositive(int number)
 {
-    throw new NotImplementedException();
-}
+    return (number & 4) != 0 && number > 0;
 
+}
 // Obtener argumentos de línea de comandos
 int number = args.Length > 0 ? int.Parse(args[0]) : 5;
 

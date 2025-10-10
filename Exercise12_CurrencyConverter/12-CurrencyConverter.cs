@@ -1,26 +1,19 @@
 using System;
+using System.Globalization; 
 
 const double EUR_TO_USD = 1.09;
 const double EUR_TO_JPY = 163.5;
 const double EUR_TO_GBP = 0.86;
 
-double ConvertToUSD(double euros)
-{
-    throw new NotImplementedException();
-}
 
-double ConvertToJPY(double euros)
-{
-    throw new NotImplementedException();
-}
 
-double ConvertToGBP(double euros)
-{
-    throw new NotImplementedException();
-}
+double ConvertToUSD(double euros) => euros * EUR_TO_USD;
+double ConvertToJPY(double euros) => euros * EUR_TO_JPY;
+double ConvertToGBP(double euros) => euros * EUR_TO_GBP;
 
-// Obtener argumentos de línea de comandos
-double euros = double.Parse(args.Length > 0 ? args[0] : "100,0");
+
+double euros = double.Parse(args.Length > 0 ? args[0] : "100.0",CultureInfo.InvariantCulture);
+
 
 // Convertir monedas
 double usd = ConvertToUSD(euros);
